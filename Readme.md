@@ -7,7 +7,11 @@
 * Kubernetes: [site](https://kubernetes.io/)
     * [Documentation](https://kubernetes.io/docs/home/)
     * [Concepts](https://kubernetes.io/docs/concepts/)
-        * [Pods](nginx-7db9fccd9b-8m2wp)
+        * [Pods](nginx-7db9fccd9b-8m2wp): [pod template](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#pod-templates)
+        * [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/): [template](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#example)
+        * [Service](https://kubernetes.io/docs/concepts/services-networking/service/): [template](https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service)
+        * [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/): [template](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment)
+        * [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
     * [Setup](https://kubernetes.io/docs/setup/)
     * [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
     * [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/)
@@ -21,8 +25,8 @@
 * Play with k8s:
     * [play-with-k8s.com](https://labs.play-with-k8s.com/)
 * Yaml: [linter](http://www.yamllint.com/)
-
-## Notes
+* Docker/Kubernetes Sample Apps:
+    * [Example Voting App](https://github.com/dockersamples/example-voting-app)
 
 ### Commands
 
@@ -44,6 +48,7 @@
 | rollout history | kubectl rollout history \<deployment-name\> | kubectl rollout history deployment/myapp-deployment |
 | rollout history | kubectl rollout history deployment \<deployment-name\> | kubectl rollout history deployment myapp-deployment |
 | apply changes | kubectl apply -f \<\> --record | kubectl apply -f deployment-definition.yml --record |
+| apply all changes in directory | kubectl apply -f \<path-to-dir\> | kubectl apply -f . |
 | change image | kubectl set image \<deployment-name\> \<image-name\>=\<tagged-image-name\> --record | kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1 --record |
 | Rollback deployment | kubectl rollout undo \<deployment-name\> | kubectl rollout undo deployment/myapp-deployment |
 | Get node info |  | kubectl get nodes -o wide |
